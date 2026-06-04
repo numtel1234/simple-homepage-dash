@@ -1,0 +1,34 @@
+[
+    {
+        "name": "http",
+        "path": "./providers/http.js",
+        "func": "check"
+    },
+    {
+        "name": "mqtt-health",
+        "path": "./providers/mqtt.js",
+        "func": "checkHealth"
+    },
+    {
+        "name": "mosquitto",
+        "path": "./providers/mqtt.js",
+        "func": "checkMosquitto",
+        "cleanup": "closeAll"
+    },
+    {
+        "name": "pihole",
+        "path": "./providers/pihole.js",
+        "func": "check",
+        "cleanup": "closeAll" 
+    },
+    {
+        "name": "proxmox",
+        "path": "./providers/proxmox.js",
+        "func": "check"
+    },
+    {
+        "name": "pulse",
+        "path": "./providers/pulse.js",
+        "func": "check"
+    }
+]

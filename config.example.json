@@ -1,0 +1,36 @@
+{
+    "Automation": [
+        {
+            "name": "n8n",
+            "desc": "Graph-based workflow automation",
+            "href": "https://n8n.server.example",
+            "provider": "http",
+            "opts": {
+                "url": "https://n8n.server.example"
+            }
+        },
+        {
+            "name": "Local MQTT Broker",
+            "desc": "Local MQTT broker at mqtt.arpa:1883",
+            "href": "",
+            "provider": "mosquitto",
+            "opts": {
+                "broker": "mqtt://mqtt.arpa:1883",
+                "userEnv": "MQTT_HEALTHCHECK_USER",
+                "passEnv": "MQTT_HEALTHCHECK_PASS"
+            }
+        }
+    ],
+    "Monitoring": [
+        {
+            "name": "Pulse",
+            "desc": "Monitoring and management of docker containers and Proxmox",
+            "href": "https://stats.local",
+            "provider": "pulse",
+            "opts": {
+                "api": "https://stats.local/api",
+                "tokenEnv": "PULSE_API_TOKEN"
+            }
+        }
+    ]
+}

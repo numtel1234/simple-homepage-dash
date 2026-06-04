@@ -1,0 +1,17 @@
+{
+  "name": "homepage-dash",
+  "version": "0.0.1",
+  "description": "Homepage dashboard with Node backend.",
+  "license": "MIT",
+  "author": "numtel",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_EXTRA_CA_CERTS=\"./certs.pem\" node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mqtt": "^5.15.1"
+  }
+}

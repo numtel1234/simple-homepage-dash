@@ -1,0 +1,177 @@
+body {
+    font-family: sans-serif;
+    margin: 2rem;
+    background: #111;
+    color: white;
+}
+
+.category {
+    margin-bottom: 2rem;
+}
+
+.category h2 {
+    margin-bottom: 1rem;
+}
+
+.service-card {
+    display: block;
+
+    text-decoration: none;
+    color: inherit;
+
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+
+    border-radius: 12px;
+
+    background: #222;
+
+    transition:
+        transform 0.15s,
+        background 0.15s;
+}
+
+.service-card:hover {
+    transform: translateY(-2px);
+    background: #2c2c2c;
+}
+
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-container {
+    margin-right: +1%;
+    margin-top: +1.7%;
+}
+
+.online {
+    border-left: 4px solid limegreen;
+}
+
+.offline {
+    border-left: 4px solid crimson;
+}
+
+.degraded {
+    border-left: 4px solid orange;
+}
+
+.status {
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+.service-card {
+    cursor: pointer;
+}
+
+.service-card.expanded {
+    background: #2c2c2c;
+}
+
+.metrics {
+    display: none;
+
+    margin-top: 1rem;
+    padding-top: 1rem;
+
+    border-top: 1px solid #444;
+}
+
+.service-card.expanded .metrics {
+    display: block;
+}
+
+.metric {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0.2rem 0;
+}
+
+.metric span:first-child {
+    opacity: 0.8;
+}
+
+.service-header h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.service-header h3 a:hover {
+    text-decoration: underline;
+}
+
+.metric-group {
+    margin-top: 0.5rem;
+}
+
+.metric-group-title {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    opacity: 0.9;
+}
+
+.metric-children {
+    margin-left: 1rem;
+    padding-left: 0.75rem;
+    border-left: 2px solid #444;
+}
+
+.metric-bar {
+    width: 100%;
+    height: 0.5rem;
+    margin-top: 0.25rem;
+    background: #333;
+    border-radius: 999px;
+    overflow: hidden;
+    grid-column: 1 / -1;
+}
+
+.metric-compare-bar {
+    width: 100%;
+    height: 0.5rem;
+    margin-top: 0.25rem;
+    background: rgba(155, 133, 9, 0.637);
+    border-radius: 999px;
+    overflow: hidden;
+    grid-column: 1 / -1;
+}
+
+.metric-bar-metric {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem;
+}
+
+.metric-bar-fill {
+    height: 100%;
+    background: limegreen;
+    transition: width 0.3s ease;
+    transition:
+        width 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.metric-compare-bar-fill {
+    height: 100%;
+    background: limegreen;
+    transition:
+        width 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.metric-status-healthy {
+    background: limegreen;
+}
+
+.metric-status-warning {
+    background: #d8ba10;
+}
+
+.metric-status-critical {
+    background: #d10808;
+}
